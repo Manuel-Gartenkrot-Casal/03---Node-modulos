@@ -1,0 +1,19 @@
+{
+  "name": "asd",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ej01": "node src/ej01.js",
+    "ej02": "node src/ej02.js",
+    "ej03": "node src/ej03.js"
+  },
+  "dependencies": {
+    "country-json": "^2.3.0",
+    "dayjs": "^1.11.20"
+  }
+}
