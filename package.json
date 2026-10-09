@@ -8,6 +8,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node server.js",
     "ej01": "node src/ej01.js",
     "ej02": "node src/ej02.js",
     "ej03": "node src/ej03.js",
@@ -21,6 +23,9 @@
   "dependencies": {
     "country-js": "^0.12.1",
     "country-json": "^2.3.0",
-    "dayjs": "^1.11.20"
+    "dayjs": "^1.11.20",
+    "express": "^4.18.2",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1"
   }
 }

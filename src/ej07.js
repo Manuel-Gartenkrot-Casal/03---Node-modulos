@@ -1,13 +1,20 @@
-
-var num = 11;
-
-function contar() {
-  num--;
-  console.log(num);
-  if (num === 1) {
-    console.log('¡Se acabó el tiempo!');
-    clearInterval(intervalo);
-  }
+export function iniciarContador(inicio = 11, intervalo = 1000) {
+    return new Promise((resolve) => {
+        let num = inicio;
+        const eventos = [];
+        
+        const timer = setInterval(() => {
+            num--;
+            eventos.push(num);
+            
+            if (num === 1) {
+                clearInterval(timer);
+                resolve({
+                    mensaje: '¡Se acabó el tiempo!',
+                    eventos: eventos,
+                    duracionMs: eventos.length * intervalo
+                });
+            }
+        }, intervalo);
+    });
 }
-
-const intervalo = setInterval(contar, 1000);

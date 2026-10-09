@@ -1,16 +1,16 @@
 import countries from 'country-json/src/country-by-name.json' with { type: "json" };
 import countriesPopulation from 'country-json/src/country-by-population.json' with { type: "json" };
 
-function obtenerPais(nombrePais) {
+export function obtenerPais(nombrePais) {
     const pais = countries.find(p => p.country === nombrePais);
     const population = countriesPopulation.find(p => p.country === nombrePais);
     
     if (pais && population) {
-        console.log(`País: ${pais.country}`);
-        console.log(`Población: ${population.population.toLocaleString()}`);
+        return {
+            pais: pais.country,
+            poblacion: population.population
+        };
     } else {
-        console.log("País no encontrado");
+        return null;
     }
 }
-
-obtenerPais("Argentina");

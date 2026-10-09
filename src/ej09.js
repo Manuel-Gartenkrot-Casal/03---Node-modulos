@@ -1,11 +1,10 @@
-function ValidarPassword(password){
+export function validarPassword(password) {
     let caracteres = password.length;
     let unNumero = /\d/.test(password);
     let unaMayuscula = /[A-Z]/.test(password);
     
-    if(caracteres >= 8 && unNumero != null && unaMayuscula != null)
-        return "Password válida";
+    if(caracteres >= 8 && unNumero && unaMayuscula)
+        return { valida: true, mensaje: "Password válida" };
     else
-        return "Password inválida"
-};
-console.log(ValidarPassword("aASDFAFD2"))
+        return { valida: false, mensaje: "Password inválida" };
+}

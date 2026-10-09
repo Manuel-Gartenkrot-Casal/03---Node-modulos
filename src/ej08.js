@@ -1,6 +1,4 @@
-console.log(AnalizarTexto("Hola, este es un texto de ejemplo para analizar."));
-
-function AnalizarTexto(texto){
+export function analizarTexto(texto){
     let palabras = texto.split(" ");
     let caracteres = texto.length;
     let vocales = texto.match(/[aeiouAEIOU]/g);
@@ -8,8 +6,8 @@ function AnalizarTexto(texto){
     let resultado = {
         totalPalabras: palabras.length,
         totalCaracteres: caracteres,
-        totalVocales: vocales = vocales.length,
-        totalConsonantes: consonantes = consonantes.length
+        totalVocales: vocales ? vocales.length : 0,
+        totalConsonantes: consonantes ? consonantes.length : 0
     };
     return resultado;
-    };
+}
