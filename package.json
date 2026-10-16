@@ -18,13 +18,17 @@
     "ej06": "node src/ej06.js",
     "ej07": "node src/ej07.js",
     "ej08": "node src/ej08.js",
-    "ej09": "node src/ej09.js"
+    "ej09": "node src/ej09.js",
+    "swagger": "node swagger.cjs"
   },
   "dependencies": {
     "country-js": "^0.12.1",
     "country-json": "^2.3.0",
     "dayjs": "^1.11.20",
-    "express": "^4.18.2",
+    "expo": "^58.0.12",
+    "express": "^4.22.3",
+    "openapi": "^1.0.0",
+    "swagger-autogen": "^2.23.7",
     "swagger-jsdoc": "^6.3.0",
     "swagger-ui-express": "^5.0.1"
   }
